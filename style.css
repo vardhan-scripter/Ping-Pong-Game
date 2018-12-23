@@ -1,0 +1,46 @@
+#start{
+			height: 40px;
+			width: 40px;
+			background: lightgreen;
+			border-radius: 20px;
+			position: absolute;top: 5%;right: 5%;
+		}
+		#stop{
+			height: 40px;
+			width: 40px;
+			background: red;
+			border-radius: 20px;
+			position: absolute;top: 90%;right: 5%;
+		}
+		
+		#canvas{
+			position: absolute;
+			top: 15%;
+			left: 15%;
+			
+		}
+		.head{
+			font-size: 40px;
+			color: seagreen;
+		}
+		.div1{
+			display: flex;
+			position: absolute;
+			top: 6%;
+			left: 28%;
+			color: seagreen;
+		}
+		.div2{
+			display: flex;
+			position: absolute;
+			top: 6%;
+			right: 28%;
+			color: seagreen;
+		}
+		#h3{
+			color: red;
+			font-size: 60px;
+			position: absolute;
+			top: 40%;
+			left: 40%;
+		}
