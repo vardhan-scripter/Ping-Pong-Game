@@ -1,16 +1,18 @@
 var a=220;
-		var c=40;
-		var b=5;
-		var d=0;
-		var e=0;
-		var f=40;
-		var g=400;
-		var h=5;
-		var count=0;
-		var best=0;
-				function start() {
-				var canvas=document.getElementById('canvas');
-			var can=canvas.getContext("2d");
+var c=40;
+var b=5;
+var d=40;
+var e=40;
+var f=40;
+var g=400;
+var h=5;
+var i=0;
+var j=0;
+var count=0;
+var best=0;
+	function start() {
+		var canvas=document.getElementById('canvas');
+		var can=canvas.getContext("2d");
 			setInterval(function() {
 				fun();
 				fun1();
@@ -19,7 +21,7 @@ var a=220;
 				function fun1() {
 				a=a+b;
 				g=g-h;
-				if (a==20&&(Math.abs(d-g)<=0||Math.abs(g-d)<=0||Math.abs(d-g+40)<=40||Math.abs(g-d+40)<=40)||a==880&&(Math.abs(e-g)<=0||Math.abs(g-e)<=0||Math.abs(e-g+40)<=40||Math.abs(g-e+40)<=40)) {
+				if (a==20&&(Math.abs(d-g)<=0||Math.abs(d-g)<=40)||a==880&&(Math.abs(e-g)<=0||Math.abs(e-g)<=40)) {
 					b=-b;
 					count=count+100;
 					document.getElementById('result1').innerHTML=count;
@@ -84,14 +86,20 @@ var a=220;
 			// body...
 		}
 		function fun() {
+			i=d-40;
+			j=e-40;
 			var canvas=document.getElementById('canvas');
 			var can=canvas.getContext("2d");
 			can.fillStyle = "black";
 			can.fillRect(0,0,900,500);
 			can.fillStyle = "red";
-			can.fillRect(1,d,15,80);
+			can.fillRect(1,d,15,40);
 			can.fillStyle = "red";
-			can.fillRect(885,e,15,80);
+			can.fillRect(1,i,15,40);
+			can.fillStyle = "red";
+			can.fillRect(885,e,15,40);
+			can.fillStyle = "red";
+			can.fillRect(885,j,15,40);
 			can.beginPath();
 			can.arc(a,g,5,0,2*Math.PI);
 			can.fillStyle="yellow";
@@ -100,7 +108,7 @@ var a=220;
 			can.fillRect(450,0,1,500);
 		}
 			function funned() {
-			if(d>=0&&d<=400)
+			if(d>=0&&d<=440)
 				{
 				d=d+c;
 				fun();
@@ -114,7 +122,7 @@ var a=220;
 			}
 			}
 			function funned2() {
-			if(e>=0&&e<=400)
+			if(e>=0&&e<=440)
 				{
 				e=e+f;
 				fun();
